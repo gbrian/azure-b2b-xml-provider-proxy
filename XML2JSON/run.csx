@@ -18,6 +18,19 @@ class MyWebClient : WebClient
 
 public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceWriter log)
 {
+    try
+    {
+        return await InternalRun(req, log);
+    }
+    catch (Exception ex) {
+        log.Error(ex.ToString());
+        var json = new { error = ex.ToString()};
+        var code = HttpStatusCode.OK;
+        return req.CreateResponse(code, json, JsonMediaTypeFormatter.DefaultMediaType);
+    }
+}
+static async Task<HttpResponseMessage> InternalRun(HttpRequestMessage req, TraceWriter log)
+{
     log.Info("C# HTTP trigger function processed a request.");
 
     // Get destiniation url
