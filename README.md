@@ -16,7 +16,5 @@ The flow is:
  * Continuous deployment: https://docs.microsoft.com/en-us/azure/azure-functions/functions-continuous-deployment
  * CORS: Remember to set * to test anywhere
  * Quota: Even going with the credits a quota is a good idea
+ * Run functions locally: https://www.npmjs.com/package/azure-functions-cli
  
-# Links & refs:
-
-* Basic JSON2XML: http://stackoverflow.com/questions/814001/how-to-convert-json-to-xml-or-xml-to-json
