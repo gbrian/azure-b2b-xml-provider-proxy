@@ -10,7 +10,13 @@ The flow is:
  * Receive provider's response
  * Converto from XML to custom protocol (removing all not needed data)
  
+# Setup
+ * Azure billing: https://azure.microsoft.com/en-us/offers/ms-azr-0022p/
+ * Visual studio: https://blogs.msdn.microsoft.com/webdev/2016/12/01/visual-studio-tools-for-azure-functions/
+ * Continuous deployment: https://docs.microsoft.com/en-us/azure/azure-functions/functions-continuous-deployment
+ * CORS: Remember to set * to test anywhere
+ * Quota: Even going with the credits a quota is a good idea
  
-Links & refs:
+# Links & refs:
 
-* http://stackoverflow.com/questions/814001/how-to-convert-json-to-xml-or-xml-to-json
+* Basic JSON2XML: http://stackoverflow.com/questions/814001/how-to-convert-json-to-xml-or-xml-to-json
