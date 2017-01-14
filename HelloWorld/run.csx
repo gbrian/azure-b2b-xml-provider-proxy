@@ -1,4 +1,5 @@
 using System.Net;
+using System.Net.Http.Formatting;
 
 // Azure functions will lkeep static data in memory
 public class StaticData{
