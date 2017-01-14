@@ -1,5 +1,10 @@
 using System.Net;
 
+public class StaticData{
+	public static int Counter = 0;
+	
+}
+
 public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceWriter log)
 {
     log.Info("C# HTTP trigger function processed a request.");
@@ -17,5 +22,5 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceW
 
     return name == null
         ? req.CreateResponse(HttpStatusCode.BadRequest, "Please pass a name on the query string or in the request body")
-        : req.CreateResponse(HttpStatusCode.OK, "Hello " + name);
+        : req.CreateResponse(HttpStatusCode.OK, "Hello " + name + (StaticData.Counter++).ToString());
 }
