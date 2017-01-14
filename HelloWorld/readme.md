@@ -1,16 +1,3 @@
-{
-  "disabled": false,
-  "bindings": [
-    {
-      "authLevel": "function",
-      "name": "req",
-      "type": "httpTrigger",
-      "direction": "in"
-    },
-    {
-      "name": "$return",
-      "type": "http",
-      "direction": "out"
-    }
-  ]
-}
+# HelloWorld
+
+Just simple Azure function to play with
