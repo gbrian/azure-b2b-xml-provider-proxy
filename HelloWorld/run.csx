@@ -1,8 +1,8 @@
 using System.Net;
 
+// Azure functions will lkeep static data in memory
 public class StaticData{
 	public static int Counter = 0;
-	
 }
 
 public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceWriter log)
@@ -19,8 +19,12 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceW
 
     // Set name to query string or body data
     name = name ?? data?.name;
-
-    return name == null
-        ? req.CreateResponse(HttpStatusCode.BadRequest, "Please pass a name on the query string or in the request body")
-        : req.CreateResponse(HttpStatusCode.OK, "Hello " + name + (StaticData.Counter++).ToString());
+	var json = new {
+		message = name == null
+				? "Please pass a name on the query string or in the request body"
+				: "Hello " + name + (StaticData.Counter++).ToString()
+	};
+	var code = name == null ? HttpStatusCode.BadRequest: HttpStatusCode.OK;
+	// Return JSON format
+    return req.CreateResponse(code, json, JsonMediaTypeFormatter.DefaultMediaType);
 }
