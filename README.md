@@ -11,3 +11,6 @@ The flow is:
  * Converto from XML to custom protocol (removing all not needed data)
  
  
+Links & refs:
+
+* http://stackoverflow.com/questions/814001/how-to-convert-json-to-xml-or-xml-to-json
