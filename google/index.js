@@ -1,9 +1,5 @@
-/**
- * HTTP Cloud Function.
- *
- * @param {Object} req Cloud Function request context.
- * @param {Object} res Cloud Function response context.
- */
-exports.helloGET = function helloGET (req, res) {
-  res.send('Hello World!');
+require('@google/cloud-debug').start();
+exports.helloGET = function (req, res) {
+	console.log(req);
+	res.send('Hello World!...1');
 };
