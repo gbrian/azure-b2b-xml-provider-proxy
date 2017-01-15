@@ -17,4 +17,5 @@ The flow is:
  * CORS: Remember to set * to test anywhere
  * Quota: Even going with the credits a quota is a good idea
  * Run functions locally: https://www.npmjs.com/package/azure-functions-cli
+ * Nuget dependencies: http://stackoverflow.com/questions/36411536/how-can-i-use-nuget-packages-in-my-azure-functions
  
