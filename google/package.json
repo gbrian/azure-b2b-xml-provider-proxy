@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/gbrian/azure-b2b-xml-provider-proxy#readme",
   "dependencies": {
-    "@google/cloud-debug": "^0.9.1"
+    "@google/cloud-debug": "^0.9.1",
+    "compression": "^1.6.2",
+    "request": "^2.79.0",
+    "xml2js": "^0.4.17"
   }
 }
