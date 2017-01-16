@@ -86,8 +86,10 @@ static void CreateResponse(HttpRequestMessage req, string json, out HttpResponse
 
 static void SetMetrics(MyWebClient wc, string xml, string json, bool areEqual, HttpResponseMessage res, MetricsManager metrics)
 {
+    foreach (string key in wc.Headers)
+        res.Headers.Add("Src-RQ-" + key, string.Join(",", wc.ResponseHeaders.GetValues(key)));
     foreach (string key in wc.ResponseHeaders.Keys)
-        res.Headers.Add("Src-" + key, string.Join(",", wc.ResponseHeaders.GetValues(key)));
+        res.Headers.Add("Src-RS-" + key, string.Join(",", wc.ResponseHeaders.GetValues(key)));
     // Get compressed size
     var xmlZipSize = Zip(xml).Length;
     var jsonZipSize = Zip(json).Length;
