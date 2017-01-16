@@ -74,6 +74,7 @@ static HttpResponseMessage InternalRun(HttpRequestMessage req, TraceWriter log)
 
     // Set headers
     metrics.TimeTaken("SetMetrics", () => SetMetrics(wc, xml, json, areEqual, res, metrics));
+
     return res;
 }
 
