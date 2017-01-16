@@ -23,7 +23,7 @@ exports.b2b_xml_provider_proxy = function b2b_xml_provider_proxy(req, res) {
 	});
 }
 function doTheJob(req, res){
-	var url = req.query.url;
+	var url = req.query.url || req.body.url;
 	var callback = function(data){ res.send(data); };
 	downloadXml(url, 
 		function(xml){ 
