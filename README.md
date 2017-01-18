@@ -11,6 +11,7 @@ The flow is:
  * Converto from XML to custom protocol (removing all not needed data)
  
 # Setup
+## Azure 
  * Azure billing: https://azure.microsoft.com/en-us/offers/ms-azr-0022p/
  * Visual studio: https://blogs.msdn.microsoft.com/webdev/2016/12/01/visual-studio-tools-for-azure-functions/
  * Continuous deployment: https://docs.microsoft.com/en-us/azure/azure-functions/functions-continuous-deployment
@@ -18,4 +19,8 @@ The flow is:
  * Quota: Even going with the credits a quota is a good idea
  * Run functions locally: https://www.npmjs.com/package/azure-functions-cli
  * Nuget dependencies: http://stackoverflow.com/questions/36411536/how-can-i-use-nuget-packages-in-my-azure-functions
+
+## Google cloud
+ * https://cloud.google.com/functions/docs/quickstart
+ * https://github.com/GoogleCloudPlatform/cloud-functions-emulator
  
